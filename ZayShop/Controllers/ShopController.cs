@@ -16,9 +16,18 @@ public class ShopController : Controller
     {
         var model = new ShopIndexVM
         {
-            StyleCategories = _context.StyleCategories.Select(x => new StyleCategoryVM
+            StyleCategories = _context.StyleCategories.Select(sc => new StyleCategoryVM
             {
-                Name = x.Name
+                Name = sc.Name
+            }).ToList(),
+
+            Products = _context.Products.Select(p => new ProductVM
+            {
+                Name = p.Name,
+                SizeOptions = p.SizeOptions,
+                Price = p.Price,
+                PhotoPath = p.PhotoPath,
+                AverageRating = p.AverageRating
             }).ToList()
         };
         return View(model);

@@ -9,4 +9,6 @@ public class AppDbContext : DbContext
     {
     }
     public DbSet<StyleCategory> StyleCategories { get; set; }
+    public DbSet<Slider> Sliders { get; set; }
+    public DbSet<Product> Products{ get; set; }
 }
