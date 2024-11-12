@@ -1,12 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ZayShop.Data;
+using ZayShop.Models.Shop;
 
-namespace ZayShop.Controllers
+namespace ZayShop.Controllers;
+
+public class ShopController : Controller
 {
-    public class ShopController : Controller
+    private readonly AppDbContext _context;
+
+    public ShopController(AppDbContext context)
     {
-        public IActionResult Index()
+        _context = context;
+    }
+    public IActionResult Index()
+    {
+        var model = new ShopIndexVM
         {
-            return View();
-        }
+            StyleCategories = _context.StyleCategories.Select(x => new StyleCategoryVM
+            {
+                Name = x.Name
+            }).ToList()
+        };
+        return View(model);
     }
 }
