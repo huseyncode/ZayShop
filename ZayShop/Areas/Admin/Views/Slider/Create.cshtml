@@ -1,7 +1,7 @@
 ﻿@using ZayShop.Areas.Admin.Models.Slider;
 @model SliderCreateVM;
 
-<form action="create" method="post">
+<form asp-action="create" method="post">
     <div class="form-group">
         <label asp-for="Header1">Header 1</label>
         <input asp-for="Header1" type="text" class="form-control" id="header1" name="header1" placeholder="Enter Header 1">
