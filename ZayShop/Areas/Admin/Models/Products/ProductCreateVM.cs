@@ -4,8 +4,8 @@ namespace ZayShop.Areas.Admin.Models.Products;
 
 public class ProductCreateVM
 {
-    [Required(ErrorMessage = "Header1 is required.")]
-    [MinLength(3, ErrorMessage = "Header 1 must be at least 3 characters long.")]
+    [Required(ErrorMessage = "Name is required.")]
+    [MinLength(3, ErrorMessage = "Name must be at least 3 characters long.")]
     public string Name { get; set; }
 
     [Required(ErrorMessage = "Size options are required.")]
