@@ -6,12 +6,13 @@
 }
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800 text-center">Shop</h1>
+<h1 class="h3 mb-2 text-gray-800 text-center">Products</h1>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-    <div class="card-header py-3 text-center">
-        <h6 class="m-0 font-weight-bold text-primary">Style Categories</h6>
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">Products</h6>
+        <a class="btn btn-primary" asp-action="create" asp-controller="product">Create</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -64,10 +65,10 @@
                             <td class="text-nowrap text-center">@product.CreatedAt.ToString("dd/MM/yyyy HH:mm")</td>
                             <td>@product.UpdatedAt?.ToString("dd/MM/yyyy HH:mm")</td>
                             <td class="text-center d-flex justify-content-center">
-                                @* <a class="btn btn-secondary mx-2" asp-action="Update" asp-controller="Shop" asp-route-id="@styleCategory.Id">Update</a>
-                            <form method="post" asp-action="delete" asp-controller="shop" asp-route-id="@styleCategory.Id">
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                            </form> *@
+                                <a class="btn btn-secondary mx-2" asp-action="update" asp-controller="product" asp-route-id="@product.Id">Update</a>
+                                <form method="post" asp-action="delete" asp-controller="product" asp-route-id="@product.Id">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     }
