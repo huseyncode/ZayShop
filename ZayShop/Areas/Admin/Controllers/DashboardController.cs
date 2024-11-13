@@ -2,7 +2,7 @@
 
 namespace ZayShop.Areas.Admin.Controllers;
 [Area("Admin")]
-public class HomeController : Controller
+public class DashboardController : Controller
 {
     public IActionResult Index()
     {

@@ -66,7 +66,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" asp-action="index" asp-controller="Shop">Shop Style Categories</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="slider">Slider</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="styles">Styles</a>
+                        <a class="collapse-item" asp-action="index" asp-controller="product">Products</a>
                     </div>
                 </div>
             </li>
@@ -81,9 +83,8 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
-                   aria-controls="collapsePages">
+            <li class="nav-item ">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
@@ -323,7 +324,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-@*                     <!-- Page Heading -->
+                    @*                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Blank Page</h1> *@
                     @RenderBody()
 
